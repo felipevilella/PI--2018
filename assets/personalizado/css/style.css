@@ -1,0 +1,11 @@
+
+.fotopetsperfil img{
+	margin: -50px auto 0;
+	border-radius: 50%;
+	width: 60px;
+	position: relative;
+	top: 30px;
+}
+.foto img{
+	border-radius: 50%;
+}
