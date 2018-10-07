@@ -8,7 +8,6 @@ class perfilTreinador_controller extends CI_Controller {
 		$this->load->view("estrutura/header");
 		$this->load->view("estrutura/navbar_usuario");
 		$this->load->view("estrutura_interna/perfilTreinador");
-		$this->load->view('teste');
 		$this->load->view("estrutura/footer");
 	}
 
