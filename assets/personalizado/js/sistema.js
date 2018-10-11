@@ -17,3 +17,6 @@ $("#perfilpets").on("click",function(){
 $("#adicionar_pets").on("click",function(){
 	$(".adicionar_pets_perfil").modal();
 });
+$("#entrarperfilpets").on("click",function(){
+	window.location.href="perfilpets";
+});

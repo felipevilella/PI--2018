@@ -9,7 +9,7 @@
             <span class="navbar-toggler-icon icon-bar"></span>
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end">
+          <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
             <form class="navbar-form">
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Pesquisar..">

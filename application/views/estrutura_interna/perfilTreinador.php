@@ -11,7 +11,7 @@
 				<h6 class="card-category text-gray">Treinador</h6>
 
 				<!-- ESTRELAS PERFIL -->
-				<img class="img"  src="<?php echo ('assets/personalizado/imagem/estrela.png');?>" />
+				<img class="img"  src="<?php echo base_url('assets/personalizado/imagem/estrela.png');?>" />
 				<img class="img"  src="<?php echo ('assets/personalizado/imagem/estrela.png');?>" />
 				<img class="img"  src="<?php echo ('assets/personalizado/imagem/estrela.png');?>" />
 				
@@ -21,9 +21,9 @@
 				</p>
 				<p class="card-description">
 					<div class="fotopetsperfil">
-						<a href="#" id="perfilpets"><img class="img"  src="<?php echo ('assets/personalizado/imagem/cachoro.png');?>"></a>
-						<a href="#" id="perfilpets"><img class="img"  src="<?php echo ('assets/personalizado/imagem/cao.jpg');?>" /></a>
-						<a href="#" id="perfilpets"><img class="img"  src="<?php echo ('assets/personalizado/imagem/ch.jpg');?>" /></a>
+						<a href="#" id="perfilpets"><img class="img"  src="<?php echo base_url('assets/personalizado/imagem/cachoro.png');?>"></a>
+						<a href="#" id="perfilpets"><img class="img"  src="<?php echo base_url('assets/personalizado/imagem/cao.jpg');?>" /></a>
+						<a href="#" id="perfilpets"><img class="img"  src="<?php echo base_url('assets/personalizado/imagem/ch.jpg');?>" /></a>
 						<a href="#" id="adicionar_pets"><i class="material-icons">add</i></a>
 					</a>
 				</p>
@@ -83,9 +83,11 @@
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<img class="img"  src="<?php echo ('assets/personalizado/imagem/cachoro.png');?>">
-			<button class="btn btn-primary col-md-12">Entrar no perfil</button>
-
+			<div class="">			
+				<button class="btn btn-primary col-md-12" id="entrarperfilpets">Entrar no perfil</button>
+			</div>
 		</div>
+		
 	</div>
 </div>
 
@@ -96,14 +98,14 @@
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<p class="card-description"><p align="center">Selecione o seu pet</p>
-				<div class="fotospetsperfil center">
-					<a href="#" id=""><img class="img"  src="<?php echo ('assets/personalizado/imagem/cachoro.png');?>"></a>
-					<a href="#" id=""><img class="img"  src="<?php echo ('assets/personalizado/imagem/cao.jpg');?>" /></a>
-					<a href="#" id=""><img class="img"  src="<?php echo ('assets/personalizado/imagem/ch.jpg');?>" /></a>
-					<a href="#" id=""><img class="img"  src="<?php echo ('assets/personalizado/imagem/ch.jpg');?>" /></a>
-				</div>
-				</a>
-			</p>
-		</div>
-	</div>
+			<div class="fotospetsperfil center">
+				<a href="#" id=""><img class="img"  src="<?php echo ('assets/personalizado/imagem/cachoro.png');?>"></a>
+				<a href="#" id=""><img class="img"  src="<?php echo ('assets/personalizado/imagem/cao.jpg');?>" /></a>
+				<a href="#" id=""><img class="img"  src="<?php echo ('assets/personalizado/imagem/ch.jpg');?>" /></a>
+				<a href="#" id=""><img class="img"  src="<?php echo ('assets/personalizado/imagem/ch.jpg');?>" /></a>
+			</div>
+		</a>
+	</p>
+</div>
+</div>
 </div>
