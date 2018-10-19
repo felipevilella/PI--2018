@@ -20,3 +20,31 @@ $("#adicionar_pets").on("click",function(){
 $("#entrarperfilpets").on("click",function(){
 	window.location.href="perfilpets";
 });
+
+
+//VER CONVERSAS
+
+$("#verconversa").on("click",function(){
+  $("#chatbox").toggleClass("hidden");
+});
+
+
+
+function showNotification(from, align){
+
+  $.notify({
+      icon: "add_alert",
+      message: " <b>Mirian te enviou uma</b> - Nova mensagem ."
+
+  },{
+      type: 'success',
+      timer: 4000,
+      placement: {
+          from: from,
+          align: align
+      }
+  });
+}
+$("#editarperfilpets").on("click",function(){
+  $("#modalalteracaopets").modal();
+});

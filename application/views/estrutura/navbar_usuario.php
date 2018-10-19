@@ -37,9 +37,8 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="#" id="verconversa">
                   <img src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" width="60px" class="img-circle img-raised foto">&nbsp Mirian solicitou uma conversa</a>
-              </a>
                 </div>
               </li>
               <li class="nav-item">
