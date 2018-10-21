@@ -6,6 +6,13 @@
 	position: relative;
 	top: 30px;
 }
+#petselecao img{
+    margin: -50px auto 0;
+    border-radius: 50%;
+    width:20%;
+    position: relative;
+    top: 90px;
+}
 .fotospetsperfil img{
 	margin: -60px auto 0;
 	border-radius: 10%;
@@ -578,4 +585,9 @@ span.friends {
     #chatbox {
         left: 53%;
     }
+}
+#fundo{
+    background-image: url('../imagem/fundo.jpg'); 
+    background-size: cover;
+     background-position: top center;
 }
