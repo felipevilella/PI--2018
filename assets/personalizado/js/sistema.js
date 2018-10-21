@@ -33,18 +33,39 @@ $("#verconversa").on("click",function(){
 function showNotification(from, align){
 
   $.notify({
-      icon: "add_alert",
-      message: " <b>Mirian te enviou uma</b> - Nova mensagem ."
+    icon: "add_alert",
+    message: " <b>Mirian te enviou uma</b> - Nova mensagem ."
 
   },{
-      type: 'success',
-      timer: 4000,
-      placement: {
-          from: from,
-          align: align
-      }
+    type: 'success',
+    timer: 4000,
+    placement: {
+      from: from,
+      align: align
+    }
   });
 }
 $("#editarperfilpets").on("click",function(){
   $("#modalalteracaopets").modal();
 });
+
+
+//MODAL FOTOS PETS
+
+$('.newbtn').bind("click" , function () {
+  $('#pic').click();
+});
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#blah')
+      .attr('src', e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+

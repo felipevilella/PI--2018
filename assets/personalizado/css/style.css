@@ -589,5 +589,17 @@ span.friends {
 #fundo{
     background-image: url('../imagem/fundo.jpg'); 
     background-size: cover;
-     background-position: top center;
+    background-position: top center;
+}
+#pic{
+   display: none;
+}
+
+.newbtn{
+   cursor: pointer;
+}
+#blah{
+  max-width:100px;
+  height:100px;
+  margin-top:20px;
 }
