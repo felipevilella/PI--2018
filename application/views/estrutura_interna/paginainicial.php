@@ -12,7 +12,7 @@
         <input type="email" class="form-control" id="email" name="email">
         <label>Senha</label>
         <input type="password" class="form-control" id="senha" name="senha">
-        <a href="#" id="esqueci">Esqueci ou nao tenho a senha</a><br>
+        <a href="#" id="esqueci">Esqueci ou nao tenho a senha</a><br><br>
 
         <input type="submit" value="Entrar" class="btn btn-primary">
       </div>
