@@ -20,6 +20,12 @@ $("#adicionar_pets").on("click",function(){
 $("#entrarperfilpets").on("click",function(){
 	window.location.href="perfilpets";
 });
+$("#alterarfotousuario").on("click",function(){
+  $(".alterarfoto_usuario").modal();
+});
+$("#alterarperfil").on("click",function(){
+  $(".editarinformacaousuario").modal();
+});
 
 
 //VER CONVERSAS

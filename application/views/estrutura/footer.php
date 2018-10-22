@@ -9,7 +9,7 @@
         <div id="friends">
 
           <div class="friend w3layouts">
-            <img src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" >
+          <img src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" >
             <p>
               <strong>Mirian </strong>
             </p>
@@ -35,7 +35,7 @@
           <label>Segunda</label>
 
           <div class="message w3layouts">
-            <img src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" >
+             <a href="<?php echo base_url("perfilusuario");?>"> <img src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" ></a>
             <div class="bubble">
               Ola tudo bem?
               <span>4 min</span>

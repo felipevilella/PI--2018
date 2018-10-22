@@ -1,8 +1,8 @@
    <nav class="navbar navbar-expand-lg bg-primary navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#">Pets Meeting</a>
-          </div>
+              <a class="navbar-brand" href="<?php echo base_url("perfiltreinador");?>"><img src="<?php echo base_url("assets/personalizado/imagem/logo.png");?>" width="50%"></a>
+   </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -20,13 +20,19 @@
               </div>
             </form>
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+  
+               <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">message</i>
+                  <span class="notification">1</span>
                   <p class="d-lg-none d-md-block">
-                    Stats
+                    Some Actions
                   </p>
                 </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#" id="verconversa">
+                  <img src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" width="60px" class="img-circle img-raised foto">&nbsp Olá tudo bem? </a>
+                </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -41,15 +47,22 @@
                   <img src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" width="60px" class="img-circle img-raised foto">&nbsp Mirian solicitou uma conversa</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+
+               <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
                   </p>
                 </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="<?php echo base_url('login');?>" id="verconversa">Sair</a>
+                </div>
               </li>
+
+              
             </ul>
           </div>
         </div>
       </nav>
+ 

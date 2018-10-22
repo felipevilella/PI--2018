@@ -446,13 +446,6 @@ span.friends {
     color: #000;
 }
 
-/*-- //Index-Page-Styling --*/
-
-
-
-
-
-/*--- Responsive-Code ---*/
 
 @media screen and (max-width: 1920px) {
     .footer p {
@@ -587,7 +580,17 @@ span.friends {
     }
 }
 #fundo{
+    background-image: url('../imagem/fundoinicio.jpg'); 
+    background-size: cover;
+    background-position: top center;
+}
+#loginfundo{
     background-image: url('../imagem/fundo.jpg'); 
+    background-size: cover;
+    background-position: top center;
+}
+#fundocadastro{
+    background-image: url('../imagem/pet.jpg'); 
     background-size: cover;
     background-position: top center;
 }
@@ -602,4 +605,8 @@ span.friends {
   max-width:100px;
   height:100px;
   margin-top:20px;
+}
+
+#site {
+    background: rgba(255,255,255,0.8); /* fundo branco com um pouco de transparência */
 }

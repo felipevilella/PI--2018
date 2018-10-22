@@ -11,4 +11,12 @@ class perfilTreinador_controller extends CI_Controller {
 		$this->load->view("estrutura/footer");
 	}
 
+	public function perfilamigo(){
+		$this->load->helper("url");
+		$this->load->view("estrutura/header");
+		$this->load->view("estrutura/navbar_usuario");
+		$this->load->view("estrutura_interna/perfilamigo");
+		$this->load->view("estrutura/footer");
+	}
+
 }   

@@ -6,4 +6,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route["perfiltreinador"] = "Sistema_interno/perfiltreinador_controller"; 
 $route["perfilpets"] = "Sistema_interno/perfilpets_controller"; 
 $route["selecionarperfilpets"] = "Sistema_interno/selecionarperfil";
+$route["cadastrar"] = "paginainicial/cadastro";
+$route["login"] = "paginainicial/login";
+$route['inicio'] = 'paginainicial';
+$route['perfilusuario']="Sistema_interno/perfiltreinador_controller/perfilamigo";
 
