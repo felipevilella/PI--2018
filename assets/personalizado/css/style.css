@@ -24,10 +24,16 @@
 .foto img{
 	border-radius: 50%;
 }
-
+.foto1 img{
+    position: relative;
+    top:-60px;
+    padding-left: -100px;
+    width: 25%;
+    border-radius: 30%;
+}
 #chatbox {
     width: 290px;
-    background: #c182cc;
+    background: #fff;
     overflow: hidden;
     height: 484px;
     position: fixed;
@@ -152,7 +158,7 @@ span.friends {
     top: 0;
     left: 0; 
     display: none;
-    background: #c182cc;
+    background: #fff;
 }
 
 #profile {

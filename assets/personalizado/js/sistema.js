@@ -34,6 +34,9 @@ $("#verconversa").on("click",function(){
   $("#chatbox").toggleClass("hidden");
 });
 
+$("#campochat").on("input",function(){
+ $("#retorno").html("você está digitando...");
+});
 
 
 function showNotification(from, align){
@@ -53,6 +56,9 @@ function showNotification(from, align){
 }
 $("#editarperfilpets").on("click",function(){
   $("#modalalteracaopets").modal();
+});
+$("#adicionarfotospets").on("click",function(){
+  $("#exampleModalCenter").modal();
 });
 
 

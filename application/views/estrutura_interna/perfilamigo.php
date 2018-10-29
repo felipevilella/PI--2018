@@ -23,11 +23,13 @@
 					</a>
 				</p>
 				<br>
-				<button class="btn btn-primary">Solicitar contato</button>
+				<button class="btn btn-warning">Solicitar contato</button>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-12">
+
+</div>
+	<div class="col-md-9">
 		<div class="card">
 			<div class="card-body">
 				<h5 class="card-title-left"> Detalhes do perfil </h5><hr>
@@ -37,7 +39,24 @@
 			</div>
 		</div>
 	</div>
+<div class="col-md-9">
+	<div class="card">
+		<div class="card-body">
+			<h5 class="card-title-left">Fotos<a href="#" id="alterarperfil">
+				<hr>
+				<div class="row">
+					<div class="col-md-12">
+						<img  src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>"  width="30%" />
+						<img  src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>"  width="30%"/>
+						<img  src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" width="30%" />
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
 </div>
 
 

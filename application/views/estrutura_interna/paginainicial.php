@@ -3,7 +3,7 @@
   <div class="row">
    <div class="col-lg-4 col-md-6 col-sm-6 ml-auto mr-auto ">
     <div class="card card-nav-tabs">
-      <div class="card-header card-header-primary">
+      <div class="card-header card-header-warning">
         Acesso
       </div>
       <div class="card-body">
@@ -14,7 +14,7 @@
         <input type="password" class="form-control" id="senha" name="senha">
         <a href="#" id="esqueci">Esqueci ou nao tenho a senha</a><br><br>
 
-        <input type="submit" value="Entrar" class="btn btn-primary">
+        <input type="submit" value="Entrar" class="btn btn-warning">
       </div>
 
     </div>

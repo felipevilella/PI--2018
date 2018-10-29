@@ -10,4 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link href="<?php echo base_url('assets/bootstrap/css/material-dashboard.css?v=2.1.0');?>" rel="stylesheet" />
      <link href="<?php echo base_url('assets/personalizado/css/style.css');?>" rel="stylesheet" />
+     <link href="<?php echo base_url('assets/personalizado/css/style.css');?>" rel="stylesheet" />
+     <link rel="stylesheet"  href="<?php echo base_url('assets/personalizado/css/formatacao.css');?>" type="text/css" >
+
   </head>

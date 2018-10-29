@@ -2,10 +2,12 @@
 <br><br>
   <div class="container">
   <div class="row">
-<div class="col-md-6" id="site">
+  <div class="col-md-3">
+  </div>
+<div class="col-md-6 card card-nav-tabs"" >
 
     <div class="card-success">
-      <div class="form-group label-floating has-success">
+      <div class="form-group label-floating has-warning">
         <div class="container">
           <div class="row">
             <div class="col-md-12"><h3><center><font color="black">Crie sua nova conta</font></center></h3></div>
@@ -47,7 +49,8 @@
                 <input type="password" class="form-control"  placeholder="" id="password1" >
               </div>
               <div class="col-md-4">
-                 <button class="btn btn-success" type="submit" name="action">Cadastrar </button>
+                <br>
+                 <button class="btn btn-warning" type="submit" name="action">Cadastrar </button>
               </div>
 
             </div>

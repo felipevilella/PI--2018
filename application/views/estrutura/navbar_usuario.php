@@ -1,4 +1,4 @@
-   <nav class="navbar navbar-expand-lg bg-primary navbar-absolute fixed-top ">
+   <nav class="navbar navbar-expand-lg bg-dark navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
               <a class="navbar-brand" href="<?php echo base_url("perfiltreinador");?>"><img src="<?php echo base_url("assets/personalizado/imagem/logo.png");?>" width="50%"></a>
@@ -10,7 +10,7 @@
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
-            <form class="navbar-form">
+            <form  action ="pesquisa" class="navbar-form">
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Pesquisar..">
                 <button type="submit" class="btn btn-white btn-round btn-just-icon">
@@ -32,8 +32,10 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="#" id="verconversa">
                   <img src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" width="60px" class="img-circle img-raised foto">&nbsp Olá tudo bem? </a>
+                  <a href="<?php echo("chatCompleto");?>"><input class="btn btn-warning" value="Ver todas as conversas"></a>  
                 </div>
               </li>
+
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>

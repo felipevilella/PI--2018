@@ -16,7 +16,7 @@
 				<img class="img"  src="<?php echo ('assets/personalizado/imagem/estrela.png');?>" />
 				<img class="img"  src="<?php echo ('assets/personalizado/imagem/estrela.png');?>" />
 				
-				<h4 class="card-title">Chihuahua</h4><a href="#" id="editarperfilpets"><i class="material-icons">create</i>Editar</a></h5><hr>
+				<h4 class="card-title">Rough Collie </h4><a href="#" id="editarperfilpets"><i class="material-icons">create</i>Editar</a></h5><hr>
 				
 				<br>
 				<p class="card-description">
@@ -82,9 +82,9 @@
 								<br><br>
 								<div class="ml-2">
 									<div class="img-thumbnail ">
-										<button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+										<a href="#" id="adicionarfotospets">
 											<img src="<?php echo base_url('assets/personalizado/imagem/add.png');?>" width="100%">
-										</button>
+										</a>
 
 										<br>
 									</div>
@@ -177,7 +177,7 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
-								<button type="button" class="btn btn-primary">Salvar</button>
+								<button type="button" class="btn btn-warning">Salvar</button>
 							</div>
 						</div>
 					</div>
@@ -206,7 +206,7 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-								<button type="button" class="btn btn-primary">Salvar e Enviar</button>
+								<button type="button" class="btn btn-warning">Salvar e Enviar</button>
 							</div>
 						</div>
 					</div>

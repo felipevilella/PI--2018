@@ -32,18 +32,38 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-12">
-		<div class="card">
-			<div class="card-body">
-				<h5 class="card-title-left"> Detalhes do perfil &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" id="alterarperfil"><i class="material-icons">create</i>Editar</a></h5><hr>
+	
+</div>
+<div class="col-md-9">
+	<div class="card">
+		<div class="card-body">
+			<h5 class="card-title-left"> Detalhes do perfil &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" id="alterarperfil"><i class="material-icons">create</i>Editar</a></h5><hr>
 
-				<p><b>Localização</b></p>
-				<p id="Localizacao"> Belo Horizonte - MG </p>
-				<p><b>Mapa</b></p>
-			</div>
+			<p><b>Localização</b></p>
+			<p id="Localizacao"> Belo Horizonte - MG </p>
+			<p><b>Mapa</b></p>
 		</div>
 	</div>
 </div>
+
+<div class="col-md-9">
+	<div class="card">
+		<div class="card-body">
+			<h5 class="card-title-left">Fotos<a href="#" id="alterarperfil">
+				<hr>
+				<button class= "btn btn-warning">Adicionar</button>
+				<button class= "btn btn-warning">Remover</button>
+				<div class="row">
+					<div class="col-md-12">
+						<img  src="<?php echo ('assets/personalizado/imagem/card-profile1-square.jpg');?>"  width="30%" />
+						<img  src="<?php echo ('assets/personalizado/imagem/card-profile1-square.jpg');?>"  width="30%"/>
+						<img  src="<?php echo ('assets/personalizado/imagem/card-profile1-square.jpg');?>" width="30%" />
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 
@@ -71,7 +91,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
-				<button type="button" class="btn btn-primary">Salvar</button>
+				<button type="button" class="btn btn-warning">Salvar</button>
 			</div>
 		</div>
 	</div>
@@ -100,7 +120,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-				<button type="button" class="btn btn-primary">Salvar </button>
+				<button type="button" class="btn btn-warning">Salvar </button>
 			</div>
 
 		</div>
@@ -148,13 +168,13 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-				<button type="button" class="btn btn-primary">Salvar </button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-warning">Salvar </button>
 
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 
 	<div class="modal fade pets_perfil_modal " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -162,7 +182,7 @@
 			<div class="modal-content">
 				<img class="img"  src="<?php echo ('assets/personalizado/imagem/cachoro.png');?>">
 				<div class="">			
-					<button class="btn btn-primary col-md-12" id="entrarperfilpets">Entrar no perfil</button>
+					<button class="btn btn-warning col-md-12" id="entrarperfilpets">Entrar no perfil</button>
 				</div>
 			</div>
 

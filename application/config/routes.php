@@ -10,4 +10,5 @@ $route["cadastrar"] = "paginainicial/cadastro";
 $route["login"] = "paginainicial/login";
 $route['inicio'] = 'paginainicial';
 $route['perfilusuario']="Sistema_interno/perfiltreinador_controller/perfilamigo";
-
+$route["chatCompleto"] = "Sistema_interno/chatCompleto_controller"; 
+$route["pesquisa"] = "Sistema_interno/pesquisa_controller";
