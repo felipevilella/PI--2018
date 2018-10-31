@@ -6,9 +6,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
+	'hostname' => 'mysql942.umbler.com:41890',
+	'username' => 'pest_meeting',
+	'password' => 'Pets2719100',
 	'database' => '',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
