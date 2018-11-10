@@ -12,7 +12,7 @@ $route['inicio'] = 'Paginainicial';
 $route['perfilusuario/(:num)']="Sistema_interno/Perfiltreinador_controller/perfilamigo/$1";
 $route["chatCompleto"] = "Sistema_interno/ChatCompleto_controller"; 
 $route["pesquisa"] = "Sistema_interno/Pesquisa_controller";
-
+$route["cadastrarPets"] = "Sistema_interno/Selecionarperfil/cadastrarPets";
 
 ## controller de funções ##
 $route["validacaousuario"] = "funcoes_sistema/Login/validacao_login";

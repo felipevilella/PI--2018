@@ -81,6 +81,9 @@ function readURL(input) {
   }
 }
 
+$("#esqueci").on("click",function(){
+  $("#recuperarsenha").modal();
+});
 $("#Entrar").on("click",function(){
     var email_usuario = $("#email").val();
     var senha_usuario = $("#senha").val();
@@ -102,6 +105,34 @@ $("#Entrar").on("click",function(){
             window.location.href = base_url+"selecionarperfilpets";
            }
         }
+
+    });
+});
+$("#cadastrarpets").on("click",function(){
+    var nome_pets = $("#nome").val();
+    var raca_pets = $("#raca").val();
+    var peso_pets = $("#peso").val();
+    var altura_pets = $("#altura").val();
+    var data_pets = $("#data").val();
+    var sexo_pets = $("#sexo").val();
+
+    $.ajax({
+      //chamar a rota configurada da função (config/routes) para o envio
+      url:base_url+"cadastrarPets",
+      type:'post',
+      dataType:'Json',
+      //envia os dados para  para a funções
+      data:{
+         nome:nome_pets,
+         raca:raca_pets,
+         peso:peso_pets,
+         altura:altura_pets,
+         data:data_pets,
+         sexo:sexo_pets
+      },
+      success:function($data){
+        console.log(data.mensagem);
+      }
 
     });
 });

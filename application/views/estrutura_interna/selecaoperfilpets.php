@@ -7,8 +7,7 @@
 			<br><br>
 			<h3>Selecione o seu pet</h3><hr>
 			<a href="<?php echo base_url("perfilpets");?>" id="perfilpets"><img class="img"  src="<?php echo base_url('assets/personalizado/imagem/cachoro.png');?>"></a>
-			<a href="#" id="perfilpets"><img class="img"  src="<?php echo base_url('assets/personalizado/imagem/cao.jpg');?>" /></a>
-			<a href="#" id="perfilpets"><img class="img"  src="<?php echo base_url('assets/personalizado/imagem/ch.jpg');?>" /></a>
+			
 			<a href="#" id="perfilpets "><img class="img" id="editarperfilpets" src="<?php echo base_url('assets/personalizado/imagem/add.jpg');?>" /></a>
 		</div>
 	</div>
@@ -26,6 +25,7 @@
 			<div class="modal-body">
 				<div class="container">
 					<div class="row"> 
+						<label id="mensagem_retorno"></label>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label id="contador_caracter">Nome</label>
@@ -62,7 +62,7 @@
 								<label id="contador_caracter">Sexo</label><br>
 								<div class="form-check form-check-radio form-check-inline">
 									<label class="form-check-label">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="macho"> Macho
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="sexo" value="macho"> Macho
 										<span class="circle">
 											<span class="check"></span>
 										</span>
@@ -70,7 +70,7 @@
 								</div>
 								<div class="form-check form-check-radio form-check-inline">
 									<label class="form-check-label">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Femea"> Femea
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="sexo" value="Femea"> Femea
 										<span class="circle">
 											<span class="check"></span>
 										</span>
@@ -83,7 +83,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
-				<button type="button" class="btn btn-primary">Salvar</button>
+				<button type="button" class="btn btn-primary" id="cadastrarpets">Salvar</button>
 			</div>
 		</div>
 	</div>
