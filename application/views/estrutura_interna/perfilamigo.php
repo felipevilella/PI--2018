@@ -1,4 +1,5 @@
 <br><br><br><br><br>
+<?php echo "<input type='hidden' id='identificacao' value='".$usuarioDados["idUsuario"]."'>"?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-9">
@@ -13,7 +14,7 @@
 				<!-- ESTRELAS PERFIL -->
 				<img class="img"  src="<?php echo base_url('assets/personalizado/imagem/estrela.png');?>" />
 				
-				<h4 class="card-title">Mirian Alves</h4>
+				<h4 class="card-title"><?php echo $usuarioDados["nome"];?></h4>
 				<p class="card-description" >
 					Olá meu nome é Mirian Alves e adoro animais de estimação.
 				</p><br>
@@ -23,7 +24,7 @@
 					</a>
 				</p>
 				<br>
-				<button class="btn btn-warning">Solicitar contato</button>
+				<button class="btn btn-warning" id="Solicitar">Solicitar contato</button>
 			</div>
 		</div>
 	</div>

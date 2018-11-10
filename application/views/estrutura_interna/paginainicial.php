@@ -7,14 +7,14 @@
         Acesso
       </div>
       <div class="card-body">
-        <form action="selecionarperfilpets" method="post">
+        <label id="retorno"></label><br>
         <label>E-mail</label>
         <input type="email" class="form-control" id="email" name="email">
         <label>Senha</label>
         <input type="password" class="form-control" id="senha" name="senha">
         <a href="#" id="esqueci">Esqueci ou nao tenho a senha</a><br><br>
 
-        <input type="submit" value="Entrar" class="btn btn-warning">
+        <input type="" id = "Entrar" value="Entrar" class="btn btn-warning">
       </div>
 
     </div>

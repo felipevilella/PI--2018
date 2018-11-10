@@ -81,3 +81,30 @@ function readURL(input) {
   }
 }
 
+$("#Entrar").on("click",function(){
+    var email_usuario = $("#email").val();
+    var senha_usuario = $("#senha").val();
+    $("#retorno").val();
+    $.ajax({
+        url:base_url+"validacaousuario",
+        type:'post',
+        dataType:'Json',
+        data:{
+            usuario: email_usuario,
+            senha: senha_usuario
+        },
+        success:function(data){
+           if(data.confirmado == false){
+            $("#retorno").html(data.mensagem);
+           }
+           else{
+            console.log(data);
+            window.location.href = base_url+"selecionarperfilpets";
+           }
+        }
+
+    });
+});
+
+
+

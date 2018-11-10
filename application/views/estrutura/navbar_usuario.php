@@ -10,6 +10,7 @@
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+            
             <form  action ="pesquisa" class="navbar-form">
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Pesquisar..">
@@ -20,7 +21,7 @@
               </div>
             </form>
             <ul class="navbar-nav">
-  
+              <li>&nbsp&nbsp Olá <?php echo($nome);?> &nbsp&nbsp</li>
                <li class="nav-item dropdown">
                 <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">message</i>

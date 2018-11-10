@@ -27,7 +27,7 @@
             <div class="cx"></div>
           </div>
           <p>Mirian</p>
-          <span></span>
+          <span id="retorno">aaaaa</span>
         </div>
 
         <div id="chat-messages">
@@ -52,7 +52,6 @@
 
 
         </div>
-
         <div id="sendmessage">
           <input type="text" placeholder="Digite a mensagem...">
           <button id="enviar"> </button>
