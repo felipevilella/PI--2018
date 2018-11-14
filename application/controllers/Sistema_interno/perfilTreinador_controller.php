@@ -29,7 +29,9 @@ class perfilTreinador_controller extends CI_Controller {
 		}
 
 		$dados["nome"] = $this->session->nome_session;
+		$dados["idusuario"] = $this->session->idusuario_session;
 		$dados["usuarioDados"] = $this->usuario_model->buscarUsuario($idusuario);
+
 		print_r($dados["usuarioDados"]); 		
 		$this->load->view("estrutura/header",$dados);
 		$this->load->view("estrutura/navbar_usuario");

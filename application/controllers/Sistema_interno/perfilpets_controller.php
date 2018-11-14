@@ -11,6 +11,8 @@ class perfilpets_controller extends CI_Controller {
 			redirect('login');
 		}
 		$dados["nome"] = $this->session->nome_session;
+		
+		
 		$this->load->view("estrutura/header",$dados);
 		$this->load->view("estrutura/navbar_usuario");
 		$this->load->view("estrutura_interna/perfilpets");

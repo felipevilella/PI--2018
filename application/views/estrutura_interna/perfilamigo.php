@@ -6,7 +6,7 @@
 			<div class="card card-profile">
 				<div class="card-body">
 					<div class="card-avatar">
-						<img class="img" src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" />
+						<img class="img" src="<?php echo base_url('assets/personalizado/imagem/avatar.jpg');?>" />
 					</a>
 				</div>
 				<h6 class="card-category text-gray">Usuario</h6><br>
@@ -47,9 +47,9 @@
 				<hr>
 				<div class="row">
 					<div class="col-md-12">
-						<img  src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>"  width="30%" />
-						<img  src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>"  width="30%"/>
-						<img  src="<?php echo ('assets/personalizado/imagem/avatar.jpg');?>" width="30%" />
+						<img  src="<?php echo base_url('assets/personalizado/imagem/avatar.jpg');?>"  width="30%" />
+						<img  src="<?php echo base_url('assets/personalizado/imagem/avatar.jpg');?>"  width="30%"/>
+						<img  src="<?php echo base_url('assets/personalizado/imagem/avatar.jpg');?>" width="30%" />
 					</div>
 				
 				</div>
