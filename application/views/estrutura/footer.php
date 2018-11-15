@@ -30,31 +30,9 @@
           <div class="cx"></div>
         </div>
         <p>Mirian</p>
-        <span id="retorno"></span>
+       <!--  <span id="retorno"></span> -->
       </div>
-
-      <div id="chat-messages">
-
-          <!-- <label>Segunda</label>
-
-          <div class="message w3layouts">
-             <a href="<?php echo base_url("perfilusuario");?>"> <img src="<?php echo base_url('assets/personalizado/imagem/avatar.jpg');?>" ></a>
-            <div class="bubble">
-              Ola tudo bem?
-              <span>4 min</span>
-            </div>
-          </div>
-
-          <div class="message right agileits">
-            <img src="<?php echo ('assets/personalizado/imagem/card-profile1-square.jpg');?>">
-            <div class="bubble">
-              Sim e vc?
-              <span>3 min</span>
-            </div>
-          </div> -->
-
-
-        </div>
+      <div id="chat-messages"> </div>
         <div id="sendmessage">
           <input type="text" placeholder="Digite a mensagem..." id="digitarMensagem">
           <button id="enviar_chat"> </button>

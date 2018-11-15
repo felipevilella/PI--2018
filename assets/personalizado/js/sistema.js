@@ -149,41 +149,46 @@ $("#digitarMensagem").on("input",function() {
   }, 5000);
 });
 
-$("#enviar_chat").on("click",function() {
- $("#retorno").html("");
-  var idusuario_usuario = $("#identifuser").val();
-  var idamigo_usuario = $("#identificacao").val();
-  var mensagem_usuario = $("#digitarMensagem").val();
+$(document).keypress(function(e) {
+  $("#enviar_chat").on("click",function() {
+   $("#retorno").html("");
 
-  $.ajax({
-     url:base_url+'enviarMensagem',
-     type:'post',
-     dataType:"Json",
-     data:{
+   var idusuario_usuario = $("#identifuser").val();
+   var idamigo_usuario = $("#identificacao").val();
+   var mensagem_usuario = $("#digitarMensagem").val();
+
+   if(mensagem_usuario != ""){
+     $.ajax({
+       url:base_url+'enviarMensagem',
+       type:'post',
+       dataType:"Json",
+       data:{
         idusuario: idusuario_usuario,
         idamigo: idamigo_usuario,
         mensagem: mensagem_usuario
-     },
-     success:function(data){
-      console.log("ok");
-     }
-  });
+      },
+      success:function(data){
+        console.log("ok");
+      }
+    });
+   }
+     $("#digitarMensagem").val("");
+ });
 });
 
-function mensagem_chat(){
-    var idusuario_usuario = $("#identifuser").val();
-    var idamigo_usuario = $("#identificacao").val();
-    $.ajax({
-     url:base_url+'mensagem',
-     type:'post',
-     dataType:"Json",
-     data:{
-        idusuario: idusuario_usuario,
-        idamigo: idamigo_usuario,
-     },
-     success:function(data){
-        $("#chat-messages").html(data.html);
-     }
-   });
+setInterval(function mensagem_chat(){
+  var idusuario_usuario = $("#identifuser").val();
+  var idamigo_usuario = $("#identificacao").val();
+  $.ajax({
+   url:base_url+'mensagem',
+   type:'post',
+   dataType:"Json",
+   data:{
+    idusuario: idusuario_usuario,
+    idamigo: idamigo_usuario,
+  },
+  success:function(data){
+    $("#chat-messages").html(data.html);
   }
-  mensagem_chat();
+});
+},1000);

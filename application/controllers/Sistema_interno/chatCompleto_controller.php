@@ -18,9 +18,16 @@ class chatCompleto_controller extends CI_Controller {
  		$idamigo = $this->input->post("idamigo");
  		$mensagem = $this->input->post("mensagem");
 
+ 		$codigoPrimeiro = $idusuario.$idamigo;
+ 		$codigoSegundo = $idamigo.$idusuario;
+ 		$soma = $codigoPrimeiro+$codigoSegundo;
+
  		$dadosMensagem = array(
  			'chatMensagem' => $mensagem,
- 			'id_destinatario' => $idamigo
+ 			'id_destinatario' => $idamigo,
+ 			'codigoMensagem' => $idusuario.$idamigo,
+ 			'codigoMensagemReverso' => $idamigo.$idusuario,
+ 			'codigofinal' => $soma
  		);
  		//enviar mensagem
  		$this->chat_model->enviar_mensagem($dadosMensagem);
@@ -33,6 +40,15 @@ class chatCompleto_controller extends CI_Controller {
  		); 
  		//salvar conversa
  		$this->chat_model->criarConversa($dadosConversa);
+
+ 		//criar notificação
+ 		$notificacao = array(
+ 			'fk_idUsuario' => $idamigo,
+ 			'fk_idtipo_notificacao' => '1',
+ 			'idAmigo' => $idusuario,
+ 			'codigoTotal' => $soma 
+ 		);
+ 		$this->chat_model->criarNotificacao($notificacao);
 
 	}
 	public function buscar_conversa(){

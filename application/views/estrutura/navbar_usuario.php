@@ -1,7 +1,7 @@
-   <nav class="navbar navbar-expand-lg bg-dark navbar-absolute fixed-top ">
+   <nav class="navbar navbar-expand-lg bg-danger navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-              <a class="navbar-brand" href="<?php echo base_url("perfiltreinador");?>"><img src="<?php echo base_url("assets/personalizado/imagem/logo.png");?>" width="50%"></a>
+              <a class="navbar-brand" href="<?php echo base_url("perfiltreinador");?>"><img src="<?php echo base_url("assets/personalizado/imagem/logo1.png");?>" width="50%"></a>
    </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>

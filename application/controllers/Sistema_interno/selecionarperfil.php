@@ -18,7 +18,7 @@ class selecionarperfil extends CI_Controller {
 		$this->load->view("estrutura/footer");
 	}
 	public function cadastrarPets() {
-		$this->load->helper('url')
+		$this->load->helper('url');
 		$this->load->library('form_validation');
 		$this->load->model("pets_model");
 		$this->load->library('session');
