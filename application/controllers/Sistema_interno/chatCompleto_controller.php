@@ -14,7 +14,9 @@ class chatCompleto_controller extends CI_Controller {
 	public function salvar_conversa() {
 		$this->load->helper('url'); 
 		$this->load->model("chat_model");
-		$idusuario = $this->input->post("idusuario");
+		$this->load->library('session');
+
+		$idusuario =  $this->session->idusuario_session;
  		$idamigo = $this->input->post("idamigo");
  		$mensagem = $this->input->post("mensagem");
 
@@ -54,9 +56,14 @@ class chatCompleto_controller extends CI_Controller {
 	public function buscar_conversa(){
 		$this->load->helper('url');
 		$this->load->model("chat_model");
+		$this->load->model("usuario_model");
+		$this->load->library('session');
 
-		$dados["idusuario"] = $this->input->post("idusuario");
+		$dados["idusuario"] =  $this->session->idusuario_session;
 		$dados["idamigo"] = $this->input->post("idamigo");
+		$dados["dadosuser"] = $this->usuario_model->buscarUsuario($dados["idusuario"]);
+		$dados["dadosamigo"] = $this->usuario_model->buscarUsuario($dados["idamigo"]);
+
 		$dados["dadosConversa"] = $this->chat_model->buscarMensagem($dados["idusuario"],$dados["idamigo"]);
 		$html = $this->load->view("templates/chat_conversa",$dados,true);
 		echo json_encode(array (

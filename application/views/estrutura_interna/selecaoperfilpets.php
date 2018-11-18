@@ -6,9 +6,61 @@
 		<div class="col-md-8" id="petselecao">
 			<br><br>
 			<h3>Selecione o seu pet</h3><hr>
-			<a href="<?php echo base_url("perfilpets");?>" id="perfilpets"><img class="img"  src="<?php echo base_url('assets/personalizado/imagem/cachoro.png');?>"></a>
+			<div class="container">
+				<div class="row">
+					<?php  
+					if(!empty($dadosPets)){
+						$i = 0;
+						foreach ($dadosPets as $pets) {
+							if ($i < 4) {
+								echo("<input type='hidden' id ='idPets".$i."' value ='".$pets["idanimais"]."'>");
+								if(empty($pets["foto_principal"])) {
+									echo"<div class='col-md-3'>
+									<a href='#' id='perfilpets'>
+									<img class='img' id='entrarperfilpets$i' src='".base_url('assets/personalizado/imagem/cachoro.png')."' /></a><br>
+									</div>";
+								} else {
+									echo"<div class='col-md-3'>
+									<a href='#' id='perfilpets'>
+									<img class='img' id='entrarperfilpets$i' src='".base_url("assets/personalizado/fotos_pets/".$pets["foto_principal"])."' /></a><br>
+									</div>";
+								}
+
+
+								$i++;
+							} else {
+								if (empty($pets["foto_principal"])) {
+									echo"<div class='col-md-3'>
+									<a href='#' id='perfilpets'>
+									<img class='img' id='entrarperfilpets$i' src='".base_url('assets/personalizado/imagem/cachoro.png')."' /></a><br>
+									</div>";
+								}
+								else{
+									echo"<div class='col-md-3'>
+									<a href='#' id='perfilpets'>
+									<img class='img' id='entrarperfilpets$i' src='".base_url('assets/personalizado/imagem/'.$pets["foto_principal"])."' /></a><br>
+									</div>";
+								}
+							}
+						}
+						if($i<4){
+							echo"
+								<div class='col-md-3'>
+								<a href='#' id='perfilpets'><img class='img' id='editarperfilpets' src=".base_url('assets/personalizado/imagem/add.jpg')." /></a>
+								</div>";
+						}
+					}
+					else{
+						echo"
+						<div class='col-md-3'>
+						<a href='#' id='perfilpets'><img class='img' id='editarperfilpets' src=".base_url('assets/personalizado/imagem/add.jpg')." /></a>
+						</div>";
+					}
+
+					?>
+				</div>
+			</div>
 			
-			<a href="#" id="perfilpets "><img class="img" id="editarperfilpets" src="<?php echo base_url('assets/personalizado/imagem/add.jpg');?>" /></a>
 		</div>
 	</div>
 </div>
@@ -30,53 +82,53 @@
 							<div class="form-group">
 								<label id="contador_caracter">Nome</label>
 								<input type="text" name="nome" id="nome" class="form-control" placeholder="">
+								<span id="erroNome"  class="errror"></span>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label id="contador_caracter">Raça</label>
-								<input type="text" name="raca" id="raca" class="form-control" placeholder="" >
+								<select id="raca" class="form-control">
+									<option value = "" > Selecione uma opção </option>
+									<?php
+									foreach ($racaPets as $raca) {
+										echo "<option value =".$raca["idracas"].">".$raca["nome"]."</option>";
+									}
+									?>
+								</select>
 							</div>
+							<span id="erroRaca" class="errror"></span>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label id="contador_caracter">Peso</label>
 								<input type="text" name="peso" id="peso" class="form-control" placeholder="">
 							</div>
+							<span id="erroPeso"  class="errror"></span>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label id="contador_caracter">Altura</label>
 								<input type="text" name="altura" id="altura" class="form-control" placeholder="">
+								<span id="erroAltura"  class="errror"></span>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label id="contador_caracter">Data nascimento</label>
-								<input type="date" name="data" id="data" class="form-control" placeholder="" >
+								<label id="contador_caracter">Ano de  nascimento</label>
+								<input type="month" name="data" id="data" class="form-control" placeholder="" >
+								<span id="erroAno" class="errror"></span>
 							</div>
 						</div>
 
 						<div class="col-md-6">
-							<div class="form-group">
-								<label id="contador_caracter">Sexo</label><br>
-								<div class="form-check form-check-radio form-check-inline">
-									<label class="form-check-label">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="sexo" value="macho"> Macho
-										<span class="circle">
-											<span class="check"></span>
-										</span>
-									</label>
-								</div>
-								<div class="form-check form-check-radio form-check-inline">
-									<label class="form-check-label">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="sexo" value="Femea"> Femea
-										<span class="circle">
-											<span class="check"></span>
-										</span>
-									</label>
-								</div>
-							</div>
+								<label><font color="black">Sexo</font></label><br>
+								<select id="sexo" class="form-control">
+									<option value = "" >Selecione uma opção</option>
+									<option value = "m" >Macho</option>
+									<option value = "f" >Femea</option>
+								</select>
+								<label id="erroSexo" class="errror"></label>
 						</div>
 					</div>
 				</div>

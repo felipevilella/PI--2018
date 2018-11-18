@@ -9,9 +9,11 @@
 #petselecao img{
     margin: -50px auto 0;
     border-radius: 50%;
-    width:20%;
+    width:100%;
     position: relative;
-    top: 90px;
+    top: 40px;
+    margin: 14px;
+ 
 }
 .fotospetsperfil img{
 	margin: -60px auto 0;
@@ -26,7 +28,7 @@
 }
 .foto1 img{
     position: relative;
-    top:-60px;
+    top:-90px;
     padding-left: -100px;
     width: 25%;
     border-radius: 30%;
@@ -618,4 +620,11 @@ span.friends {
 }
 #retorno{
     color:black;
+}
+.sucesso {
+    color: green;
+}
+.errror {
+    color:red;
+    font-size: 15px;
 }

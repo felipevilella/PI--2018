@@ -11,9 +11,15 @@
       <div id="friends">
 
         <div class="friend w3layouts">
-          <img src="<?php echo base_url('assets/personalizado/imagem/avatar.jpg');?>" >
+          <?php
+            if (empty($dadosusuarioamigo["foto_principal"])) {
+              echo "<img class='img' src=".base_url('assets/personalizado/imagem/avatar.jpg').">";
+            } else {
+              echo "<img class='img' src='".base_url("assets/personalizado/fotos_pets/".$dadosusuarioamigo["foto_principal"])."'>";
+            }
+            ?>
           <p>
-            <strong>Mirian </strong>
+            <strong><?php echo  $dadosusuarioamigo["nome"]; ?></strong>
             (Enviar mensagem)
           </p>
           
@@ -29,7 +35,7 @@
           <div class="cy"></div>
           <div class="cx"></div>
         </div>
-        <p>Mirian</p>
+        <p><?php echo $dadosusuarioamigo["nome"]; ?></p>
        <!--  <span id="retorno"></span> -->
       </div>
       <div id="chat-messages"> </div>
@@ -55,12 +61,11 @@
   <script src="<?php echo base_url('assets/bootstrap/js/core/popper.min.js');?>" type="text/javascript"></script>
   <script src="<?php echo base_url('assets/bootstrap/js/core/bootstrap-material-design.min.js');?>" type="text/javascript"></script>
   <script src="<?php echo base_url('assets/bootstrap/js/plugins/perfect-scrollbar.jquery.min.js')?>"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <script src="<?php echo base_url('assets/bootstrap/js/plugins/chartist.min.js')?>"></script>
   <script src="<?php echo base_url('assets/bootstrap/js/plugins/bootstrap-notify.js');?>"></script>
   <script src="<?php echo base_url('assets/bootstrap/js/material-dashboard.min.js?v=2.1.0');?>" type="text/javascript"></script>
   <script src="<?php echo base_url('assets/personalizado/js/sistema.js');?>"></script>
-  
+    <script src="<?php echo base_url('assets/personalizado/js/atualizacoes.js');?>"></script>
   <script src="<?php echo base_url('assets/personalizado/js/tabs.js');?>"></script>
   <script>
     $(document).ready(function() {

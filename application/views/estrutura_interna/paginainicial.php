@@ -3,7 +3,7 @@
   <div class="row">
    <div class="col-lg-4 col-md-6 col-sm-6 ml-auto mr-auto ">
     <div class="card card-nav-tabs">
-      <div class="card-header card-header-warning">
+      <div class="card-header card-warning">
         Acesso
       </div>
       <div class="card-body">
@@ -33,7 +33,7 @@
         
         <div class="form-group">
           <label id="contador_caracter">E-mail</label>
-         <input type="email" id="email" class="form-control" placeholder="Digite o seu e-mail">
+         <input type="email" id="emailesquecisenha" class="form-control" placeholder="Digite o seu e-mail">
           
         </div>
       </div>

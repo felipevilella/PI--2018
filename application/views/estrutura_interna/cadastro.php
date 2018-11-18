@@ -10,47 +10,59 @@
       <div class="form-group label-floating has-warning">
         <div class="container">
           <div class="row">
-            <div class="col-md-12"><h3><center><font color="black">Crie sua nova conta</font></center></h3></div>
+            <div class="col-md-12">
+              <h3><center><font color="black">Crie sua nova conta</font></center></h3>
+              <h5><center><font color="green"><label id="retonoCadastro"></label></font></font></center></h5>
+            </div>
             <div class="col-md-6">
               <label><font color="black">Nome</font></label><br>
               <input type="text" class="form-control"  placeholder="" id="nome" >
+              <label id="erroNome" class="errror"></label>
             </div>
             <div class="col-md-6">
               <label><font color="black">Sobrenome</font></label><br>
               <input type="text" class="form-control"  placeholder="" id="sobrenome" >
+              <label id="erroSobrenome" class="errror"></label>
             </div>
             <div class="col-md-6">
               <label><font color="black">Estado</font></label><br>
-              <select id="inputState" class="form-control">
+              <select id="estadoBuscar" class="form-control">
                 <option selected>Selecione uma opção</option>
-                <option value="1">Minas Gerais</option>
-                <option value="2">São Paulo</option>
-                <option value="3">Rio de Janeiro</option>              </select>
+                <?php foreach ($estado as $dadosEstados){
+                    echo "<option value='".$dadosEstados["idestado"]."''>".$dadosEstados["nome"]."</option>";
+                  } 
+                ?>
+                 </select>
+                 <label id="erroEstado" class="errror"></label>  
               </div>
               <div class="col-md-6">
                 <label><font color="black">Cidade</font></label><br>
-                <select id="inputState" class="form-control">
+                <select id="Cidade" class="form-control">
                   <option selected>Selecione uma opção</option>
-                  <option value="1">Belo Horizonte</option>
-                  <option value="2">São Paulo</option>
-                  <option value="3">Rio de Janeiro</option>
                 </select>
+                 <label id="erroCidade" class="errror"></label>
               </div>
               <div class="col-md-12">
                 <label><font color="black">Email</font></label><br>
                 <input type="text" class="form-control"  placeholder="" id="email" >
+                 <label id="erroEmail" class="errror"></label>
               </div>
               <div class="col-md-12">
                 <label><font color="black">Senha</font></label><br>
                 <input type="password" class="form-control"  placeholder="" id="password" >
+                 <label id="erroSenha" class="errror"></label>
               </div>
               <div class="col-md-12">
                 <label><font color="black">Confirmação de senha</font></label><br>
                 <input type="password" class="form-control"  placeholder="" id="password1" >
               </div>
+               <div class="col-md-12" id="senharetorno">
+               <label id="retornosenha"></label>
+              </div>
+
               <div class="col-md-4">
                 <br>
-                 <button class="btn btn-warning" type="submit" name="action">Cadastrar </button>
+                 <input type="button"  class="btn btn-warning" id="Cadastrar" value = "Cadastrar">
               </div>
 
             </div>

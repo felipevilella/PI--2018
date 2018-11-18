@@ -9,7 +9,6 @@
 		<hr style="height:2px; border:none; color:#FFD700; background-color:#FFD700; margin-top: 0px; margin-bottom: 0px;"/><br>
 		<h5 style="color:#FFD700;font-family:cursive, sans-serif">Já pensou em encontrar um parceiro para o seu pet? Nós te ajudamos!</h5>
   </div>
-
 </div>
 </div>
   <br><br><br><br>

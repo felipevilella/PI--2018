@@ -5,28 +5,59 @@
 			<div class="card card-profile">
 				<div class="card-body">
 					<div class="card-avatar">
-						<img class="img" src="<?php echo ('assets/personalizado/imagem/card-profile1-square.jpg');?>" />
+						<?php
+						if (empty($dadosusuario["foto_principal"])) {
+							echo "<img class='img' src=".base_url('assets/personalizado/imagem/avatar.jpg').">";
+						} else {
+							echo "<img class='img' src='".base_url("assets/personalizado/fotos_pets/".$dadosusuario["foto_principal"])."'>";
+						}
+						?>
 					</a>
 				</div>
 				<h6 class="card-category text-gray">Treinador</h6><a href="#" id="alterarfotousuario"><i class="material-icons">create</i>Editar</a></h5><br>
 
 				<!-- ESTRELAS PERFIL -->
 				<img class="img"  src="<?php echo base_url('assets/personalizado/imagem/estrela.png');?>" />
-				<img class="img"  src="<?php echo ('assets/personalizado/imagem/estrela.png');?>" />
-				<img class="img"  src="<?php echo ('assets/personalizado/imagem/estrela.png');?>" />
+				<img class="img"  src="<?php echo base_url('assets/personalizado/imagem/estrela.png');?>" />
+				<img class="img"  src="<?php echo base_url('assets/personalizado/imagem/estrela.png');?>" />
 				
-				<h4 class="card-title">Alec Thompson</h4>
+				<h4 class="card-title"><?php echo $nome; ?></h4>
 				<p class="card-description" >
-					Olá meu nome é Alec Thompson e adoro animais de estimação.<a href="#" id="descricao"><i class="material-icons">create</i>editar</a>
+					Olá meu nome é <?php echo $nome;?> e adoro animais de estimação.<!-- <a href="#" id="descricao"><i class="material-icons">create</i>editar</a> -->
 					
 				</p>
 				<p class="card-description">
 					<div class="fotopetsperfil">
-						<a href="#" id="perfilpets"><img class="img"  src="<?php echo base_url('assets/personalizado/imagem/cachoro.png');?>"></a>
-						<a href="#" id="perfilpets"><img class="img"  src="<?php echo base_url('assets/personalizado/imagem/cao.jpg');?>" /></a>
-						<a href="#" id="perfilpets"><img class="img"  src="<?php echo base_url('assets/personalizado/imagem/ch.jpg');?>" /></a>
-						<a href="#" id="adicionar_pets"><i class="material-icons">add</i></a>
-					</a>
+						<?php  
+					if(!empty($dadosPets)){
+						$i = 0;
+						foreach ($dadosPets as $pets) {
+							if ($i < 4) {
+								echo("<input type='hidden' id ='idPets".$i."' value ='".$pets["idanimais"]."'>");
+								if(empty($pets["foto_principal"])) {
+									echo"
+									<a href='#' id='perfilpets'>
+									<img class='img' id='entrarperfilpets$i' src='".base_url('assets/personalizado/imagem/cachoro.png')."' /></a>
+									</div>";
+								} else {
+									echo"
+									<a href='#' id='perfilpets'>
+									<img class='img' id='entrarperfilpets$i' src='".base_url("assets/personalizado/fotos_pets/".$pets["foto_principal"])."' /></a>
+									";
+								}
+								$i++;
+							} else {
+								if (empty($pets["foto_principal"])) {
+									echo"
+									<a href='#' id='perfilpets'>
+									<img class='img' id='entrarperfilpets$i' src='".base_url('assets/personalizado/imagem/cachoro.png')."' /></a>";
+								}
+
+							}
+						}
+					}
+
+					?>
 				</p>
 				<br>
 			</div>
@@ -40,32 +71,11 @@
 			<h5 class="card-title-left"> Detalhes do perfil &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" id="alterarperfil"><i class="material-icons">create</i>Editar</a></h5><hr>
 
 			<p><b>Localização</b></p>
-			<p id="Localizacao"> Belo Horizonte - MG </p>
+			<p id="Localizacao"> <?php echo $dadosusuario["nomeCidade"]."/".$dadosusuario["nomeEstado"];?> </p>
 			<p><b>Mapa</b></p>
 		</div>
 	</div>
 </div>
-
-<div class="col-md-9">
-	<div class="card">
-		<div class="card-body">
-			<h5 class="card-title-left">Fotos<a href="#" id="alterarperfil">
-				<hr>
-				<button class= "btn btn-warning">Adicionar</button>
-				<button class= "btn btn-warning">Remover</button>
-				<div class="row">
-					<div class="col-md-12">
-						<img  src="<?php echo ('assets/personalizado/imagem/card-profile1-square.jpg');?>"  width="30%" />
-						<img  src="<?php echo ('assets/personalizado/imagem/card-profile1-square.jpg');?>"  width="30%"/>
-						<img  src="<?php echo ('assets/personalizado/imagem/card-profile1-square.jpg');?>" width="30%" />
-					</div>
-				
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
 
 
 
@@ -101,6 +111,10 @@
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-header">
+				<form action="<?php echo base_url('alterarFotoUsuario');?>" method="post" enctype="multipart/form-data">
+					<?php 
+						echo "<input type ='hidden' name='idusuario' value='".$idusuario."'>";
+					?>
 				<h5 class="modal-title" id="exampleModalLongTitle">Alterar Foto</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -111,8 +125,8 @@
 					<div class="row">
 						<div class="col-md">
 							<label class=newbtn>
-								<img id="blah" src="http://placehold.it/120x120" >
-								<input id="pic" class='pis' onchange="readURL(this);" type="file" >
+								<img id="blah" src="http://placehold.it/400x400" >
+								<input id="pic" class='pis' name = 'fotousuarioperfil' onchange="readURL(this);" type="file" >
 							</label>
 						</div>
 					</div>
@@ -120,8 +134,9 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-				<button type="button" class="btn btn-warning">Salvar </button>
+				<button type="submit" class="btn btn-warning">Salvar </button>
 			</div>
+		</form>
 
 		</div>
 	</div>

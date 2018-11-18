@@ -1,4 +1,6 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Chat_model extends CI_Model{
 
 	function __construct() { 
@@ -30,6 +32,27 @@ class Chat_model extends CI_Model{
 		$this->db->where("mensagem.codigofinal",$soma);
 		$this->db->join("mensagem","mensagem.idMensagem = conversa.Fk_idMensagem");
 		return $this->db->get("conversa")->result_array();
+	}
+
+	public function buscarNotificacao($idusuario){
+		$this->db->where("idAmigo",$idusuario);
+		$this->db->group_by("codigoTotal");
+		return $this->db->get("notificacao")->result_array();
+	}
+	public function mostrarMensagemNotificacao($idusuario,$id_destinatario,$codigoTotal){
+		$this->db->select("mensagem.chatMensagem,conversa.id_destinatario,conversa.fk_idUsuario,mensagem.codigofinal");
+		$this->db->where("codigofinal",$codigoTotal);
+		$this->db->join("mensagem","mensagem.idMensagem = conversa.Fk_idMensagem");
+		$this->db->where("mensagem.id_destinatario",$idusuario);
+		$this->db->where("conversa.fk_idUsuario",$id_destinatario);
+		$this->db->order_by("idMensagem","desc");
+		return $this->db->get("conversa")->row_array();
+	}
+	public function mostrarContadorDeMensagem($idusuario){
+		$this->db->select_sum("ativo");
+		$this->db->where("idAmigo",$idusuario);
+		return $this->db->get("notificacao")->row_array();
+		
 	}
 
 }
