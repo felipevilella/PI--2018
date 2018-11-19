@@ -33,7 +33,15 @@ class Chat_model extends CI_Model{
 		$this->db->join("mensagem","mensagem.idMensagem = conversa.Fk_idMensagem");
 		return $this->db->get("conversa")->result_array();
 	}
-
+	
+	public function buscarConversa($fk_idUsuario,$id_destinatario){
+		$codigoPrimeiro = $fk_idUsuario.$id_destinatario;
+ 		$codigoSegundo = $id_destinatario.$fk_idUsuario;
+ 		$soma = $codigoPrimeiro+$codigoSegundo;
+		$this->db->select('conversa.fk_idUsuario,conversa.id_destinatario as idConversaDestinatario, mensagem.data');
+		return $this->db->get("conversa")->result_array();
+	}
+	
 	public function buscarNotificacao($idusuario){
 		$this->db->where("idAmigo",$idusuario);
 		$this->db->group_by("codigoTotal");
